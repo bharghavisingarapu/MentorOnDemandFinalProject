@@ -1,0 +1,44 @@
+   <style>
+     .button{
+    display: block;
+    width: 150px;
+    height: 35px;
+    background: #4cae4c;
+    padding: 10px;
+    padding-top: 8px;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
+}
+a:hover{
+  background-color: blue;
+}
+#list{
+  margin-left: -610px;
+  margin-top: -170px;
+}
+   </style>
+   <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   </head>
+ <body style="background-color:black; height: 700px; margin: 0px;">
+  <a routerLink="/mentorsearch">
+    <button type="button" class="btn btn-default" style="float: left;margin-top: 15px; margin-left: 1000px;">
+      <span class="glyphicon glyphicon-search"></span> Find Mentors & Technologies
+    </button></a><br><br>
+  <a class="button" style="float: left; margin-top: 10px; margin-left: 1150px; background-color: red; position: sticky; position: -webkit-sticky;" routerLink='/index'>Logout</a>
+  <div style="padding-top: 250px; padding-left: 350px;">
+
+   <a class="button"  routerLink='/users'>List Users</a><br>
+   <br>
+   
+   <a class="button"  routerLink='/trainings'>List Trainings</a><br><br>
+   <a class="button"  routerLink='/technologies'>List Technologies</a>
+   
+  </div>
+</body>

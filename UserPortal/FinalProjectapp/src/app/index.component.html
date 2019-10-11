@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="background-color:black; height: 800px;">
+<div class="container" style="width: 100%">
+  <div style="margin-top: 0px; padding-top: 2px;  color: white; width: 100%; height: 100px;">
+  	
+<h1 class="text-center" style="font-weight: bold; font-size: 35px; font-family: cursive;">APPLE Beauty</h1>
+<br>
+<br>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li ><a style="background-color: inherit" routerLink="/adminlogin"> Admin Login</a></li>
+          <li><a  style="background-color: inherit"  routerLink="/userlogin"> User Login</a></li>
+          <li><a routerLink="/mentorlogin" style="background-color: inherit">Mentor Login</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+  </div>
+  </div>
+</body>
+
+<script type="text/javascript">
+	function user()
+	{
+		location.href = "userlogin.html";
+	}
+	function mentor()
+	{
+		location.href = 'mentorlogin.html';
+	}
+	function admin()
+	{
+		location.href = 'adminlogin.html';
+  }
+ 
+
+</script>
+<router-outlet></router-outlet>
+</html>

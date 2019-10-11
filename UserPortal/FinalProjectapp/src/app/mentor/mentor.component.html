@@ -1,0 +1,101 @@
+<style>
+.button {
+    display: block;
+    width: 150px;
+    height: 45px;
+    background: red;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+  }
+</style>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <style>
+  #customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  color:white;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: blue;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+  </style>
+<body style="background-color: black;height:700px;color:white;">
+<div class="col-md-6">
+    <a routerLink="/mentorsearch"><button type="button" class="btn btn-default" style="float: left;margin-top: 15px; margin-left: 1000px;">
+        <span class="glyphicon glyphicon-search"></span> Find Mentors & Technologies
+      </button></a>
+  <a class="button" style="margin-top: 10px; float: left; margin-left: 1150px; position: sticky; position: -webkit-sticky; right: 0;" routerLink='/index'>Logout</a>
+<h2> Mentor Details</h2>
+
+<table id="customers">
+  <thead>
+  <tr>
+    <th>MentorId</th>
+    <th>UserName</th>
+    <th>Email Id</th>
+    <th>Password</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>ContactNumber</th>
+    <th>RegistrationCode</th>
+    <th>Role</th>
+    <th>LinkedInUrl</th>
+    <th>Experience</th>
+    <th>Active</th>
+    <th>ConfirmedSignup</th>
+    <th>Reset Password Date</th>
+    <th>TimeZone</th>
+    <th>WorkTime</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let mentor of mentors; let mentorId=index">
+    <!-- <span *ngIf="mentor.active == true"> -->
+    <td>{{mentor.mentorId}}</td>
+    <td>{{mentor.userName}}</td>
+    <td>{{mentor.email}}</td>
+    <td>{{mentor.password}}</td>
+    <td>{{mentor.firstName}}</td>
+    <td>{{mentor.lastName}}</td>
+    <td>{{mentor.contactNumber}}</td>
+    <td>{{mentor.regCode}}</td>
+    <td>{{mentor.role}}</td>
+    <td>{{mentor.linkedinUrl}}</td>
+    <td>{{mentor.yearsOfExperience}}</td>
+    <!-- <td contenteditable="false"  (input)="act = $event.target.value"><textarea [(ngModel)]="mentor.active" maxlength="5" style="resize: none">{{mentor.active}}</textarea></td> -->
+    <td>{{mentor.active}}</td>
+    <td>{{mentor.confirmedSignUp}}</td>
+    <td>{{mentor.resetPasswordDate}}</td>
+    <td>{{mentor.timeZone}}</td>
+    <td>{{mentor.workTime}}</td>
+    <td><button class="btn btn-danger" (click)="deleteUser(mentor)"> Delete</button></td>
+  <!-- </span> -->
+  </tr>
+  </tbody>
+</table>
+</div>
+</body>
